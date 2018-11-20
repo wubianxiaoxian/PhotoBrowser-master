@@ -218,7 +218,7 @@ open class PhotoBrowserCell: UICollectionViewCell {
             self?.layout()
         })
     }
-    func loadRawImage(completion: (() -> Void)?) {
+    open func loadRawImage(completion: (() -> Void)?) {
         guard let url = rawUrl else { return }
         loadImage(withPlaceholder: imageView.image, url: url, completion: { [weak self] in
             self?.layout()
